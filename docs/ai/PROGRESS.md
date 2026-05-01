@@ -93,3 +93,5 @@ Flappy Bird風ゲームを一度完成扱いにした
 スマホ操作向けにタップ表記、タッチ干渉防止、小画面UI調整を追加
 
 GitHub Pages公開準備としてルートindex.htmlと.gitignoreを追加
+
+スマホでUI上のタップが効かない問題と横画面フィットをCSSで修正
