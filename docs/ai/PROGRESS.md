@@ -95,3 +95,5 @@ Flappy Bird風ゲームを一度完成扱いにした
 GitHub Pages公開準備としてルートindex.htmlと.gitignoreを追加
 
 スマホでUI上のタップが効かない問題と横画面フィットをCSSで修正
+
+スマホ横画面フィットを100vhフォールバックと100dvh対応に変更
