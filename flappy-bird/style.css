@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #161b22;
+  color: #ffffff;
+  font-family: system-ui, sans-serif;
+  overscroll-behavior: none;
+}
+
+main {
+  text-align: center;
+}
+
+.game-shell {
+  position: relative;
+  width: min(800px, calc(100vw - 24px));
+  aspect-ratio: 16 / 9;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #87ceeb;
+  border: 3px solid #f8fbff;
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+  touch-action: none;
+}
+
+.hud {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 8px 12px;
+  color: #172033;
+  background: rgba(255, 255, 255, 0.78);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  text-shadow: none;
+}
+
+.score-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.score-value {
+  min-width: 24px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: right;
+}
+
+.prompt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(360px, calc(100% - 48px));
+  padding: 24px 28px;
+  color: #ffffff;
+  background: rgba(12, 18, 30, 0.74);
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  transform: translate(-50%, -50%);
+}
+
+.prompt.is-hidden {
+  display: none;
+}
+
+.prompt h1,
+.prompt p {
+  margin: 0;
+}
+
+.prompt h1 {
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.prompt-kicker {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: #f7d766;
+}
+
+.prompt-score {
+  min-height: 28px;
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.prompt-action {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .hud {
+    top: 10px;
+    left: 10px;
+    padding: 6px 10px;
+  }
+
+  .score-value {
+    font-size: 20px;
+  }
+
+  .prompt {
+    width: calc(100% - 32px);
+    padding: 18px 20px;
+  }
+
+  .prompt h1 {
+    font-size: 26px;
+  }
+
+  .prompt-score {
+    font-size: 18px;
+  }
+
+  .prompt-action {
+    font-size: 14px;
+  }
+}
